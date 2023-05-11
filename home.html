@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %} 
+<form method='post' class="screen-home">
+    <div class="form">
+        <h2>Uneixte al xat</h2>
+        <div class="form-input">
+            <label>Usuari</label>
+            <input type="text" placeholder="Tria un nom!" name="username" value="{{username}}"/>
+        </div>
+        <div class="form-input">
+            <button type="submit" name="join-user">Uneix-te</button>
+        </div>
+        {% if error %}
+        <ul>
+            <li>{{error}}</li>
+        </ul>
+        {% endif %}   
+    </div>
+</form>
+{% endblock %}
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filname='css/style.css')}}" <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+        integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+        crossorigin="anonymous">
+    </script>
+    />
+</head>
+
+<body>
+    <div class="app">
+        <div class="screen home active">
+            <div class="form">
+                <h2>Uneixte al xat</h2>
+                <div class="form-input">
+                    <label>Usuari</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button type="submit" id="join-user">Uneix-te</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" scr="socket.io/socket.io.js"></script>
+    <script type="text/javascript" scr="code.js"></script>
+
+
+</body>
+
+</html> -->
